@@ -27,10 +27,15 @@ if (screenSmall) {
 
 document.body.onclick = function (e) {
     e.stopPropagation();
-    if (e.target.className === "hamburger-menu") {
+    if (navList.contains(e.target)) {
         console.log("list is clicked");
+    } else if (
+        !navList.contains(e.target) &&
+        navList.classList.contains("show-menu")
+    ) {
+        navList.classList.remove("show-menu");
+        // console.log(e.target.textContent + ": outside is clicked");
     }
-    console.log(e.target.textContent + ": outside is clicked");
 };
 
 // if (navList.classList.contains("show-menu")) {
