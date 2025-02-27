@@ -1,6 +1,6 @@
-// const screenSize = window.innerWidth;
+const screenSmall = window.innerWidth < 800 ? true : false;
 
-// console.log(screenSize);
+console.log(screenSmall);
 
 var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
 var navList = hamburgerButton.nextElementSibling;
