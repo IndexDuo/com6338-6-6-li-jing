@@ -7,14 +7,17 @@ var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
 
 addEventListener("resize", () => {
-    screenSmall = window.innerWidth < 800 ? true : false;   
+    screenSmall = window.innerWidth < 800 ? true : false;
 });
 
-
-if(screenSmall){
+if (screenSmall) {
     // console.log("small screen" + window.innerWidth);
     hamburgerButton.addEventListener("click", () => {
-        navList.classList.add("show-menu");
+        if (navList.classList.contains("show-menu")) {
+            navList.classList.remove("show-menu");
+        } else {
+            navList.classList.add("show-menu");
+        }
     });
 } else {
     // console.log("large screen" + window.innerWidth);
