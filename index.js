@@ -17,6 +17,22 @@ if (screenSmall) {
         if (navList.classList.contains("show-menu")) {
             navList.classList.remove("show-menu");
             hamburgerButton.setAttribute("aria-expanded", false);
+
+            document.body.onclick = function (e) {
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                e.preventDefault();
+                if (navList.contains(e.target)) {
+                    console.log("list is clicked");
+                } else if (
+                    hamburgerButton.getAttribute("aria-expanded") &&
+                    !navList.contains(e.target) &&
+                    navList.classList.contains("show-menu")
+                ) {
+                    navList.classList.remove("show-menu");
+                    console.log(e.target.textContent + ": outside is clicked");
+                }
+            };
         } else {
             navList.classList.add("show-menu");
             hamburgerButton.setAttribute("aria-expanded", true);
@@ -29,21 +45,21 @@ if (screenSmall) {
 
 // console.log(hamburgerButton.getAttribute("aria-expanded"));
 
-document.body.onclick = function (e) {
-    e.stopImmediatePropagation();
-    e.stopPropagation();
-    e.preventDefault();
-    if (navList.contains(e.target)) {
-        console.log("list is clicked");
-    } else if (
-        hamburgerButton.getAttribute("aria-expanded") &&
-        !navList.contains(e.target) &&
-        navList.classList.contains("show-menu")
-    ) {
-        navList.classList.remove("show-menu");
-        console.log(e.target.textContent + ": outside is clicked");
-    }
-};
+// document.body.onclick = function (e) {
+//     e.stopImmediatePropagation();
+//     e.stopPropagation();
+//     e.preventDefault();
+//     if (navList.contains(e.target)) {
+//         console.log("list is clicked");
+//     } else if (
+//         hamburgerButton.getAttribute("aria-expanded") &&
+//         !navList.contains(e.target) &&
+//         navList.classList.contains("show-menu")
+//     ) {
+//         navList.classList.remove("show-menu");
+//         console.log(e.target.textContent + ": outside is clicked");
+//     }
+// };
 
 // if (navList.classList.contains("show-menu")) {
 //     hamburgerButton.setAttribute("aria-expanded", "true");
