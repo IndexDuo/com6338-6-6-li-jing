@@ -31,7 +31,6 @@ function handleHamburgerButton() {
     // });
 
     document.body.addEventListener("click", (e) => {
-        e.stopImmediatePropagation();
         e.stopPropagation();
         e.preventDefault();
         if (hamburgerButton.contains(e.target)) {
