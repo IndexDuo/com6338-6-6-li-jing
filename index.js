@@ -52,6 +52,12 @@ function handleHamburgerButton() {
             // console.log(e.target.textContent + ": outside is clicked");
         }
     });
+
+    document.onkeyup = function(e){
+        if(e.key === "Escape"){
+            
+        }
+    }
 }
 
 // console.log(hamburgerButton.getAttribute("aria-expanded"));
