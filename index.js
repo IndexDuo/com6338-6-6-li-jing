@@ -30,6 +30,7 @@ if (screenSmall) {
 // console.log(hamburgerButton.getAttribute("aria-expanded"));
 
 document.body.onclick = function (e) {
+    e.stopImmediatePropagation();
     e.stopPropagation();
     e.preventDefault();
     if (navList.contains(e.target)) {
