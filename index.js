@@ -16,25 +16,11 @@ if (screenSmall) {
         if (navList.classList.contains("show-menu")) {
             navList.classList.remove("show-menu");
             hamburgerButton.setAttribute("aria-expanded", false);
+            
         } else {
             navList.classList.add("show-menu");
             hamburgerButton.setAttribute("aria-expanded", true);
             console.log(hamburgerButton.getAttribute("aria-expanded"));
-
-            document.body.onclick = function (e) {
-                e.stopPropagation();
-                if (navList.contains(e.target)) {
-                    console.log("list is clicked");
-                } else if (
-                    !navList.contains(e.target) &&
-                    navList.classList.contains("show-menu")
-                ) {
-                    navList.classList.remove("show-menu");
-                    console.log(e.target.textContent + ": outside is clicked");
-                    hamburgerButton.setAttribute("aria-expanded", false);
-                    console.log(hamburgerButton.getAttribute("aria-expanded"));
-                }
-            };
         }
     });
 } else {
