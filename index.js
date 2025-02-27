@@ -4,11 +4,12 @@
 
 var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
 var navList = hamburgerButton.nextElementSibling;
-console.log(navList);
+// console.log(navList);
 
 addEventListener("resize", (event) => {
     if (window.innerWidth < 800) {
         // console.log("small screen" + window.innerWidth);
+        hamburgerButton.onClick
     } else {
         // console.log("large screen" + window.innerWidth);
     }
