@@ -1,6 +1,6 @@
 const screenSmall = window.innerWidth < 800 ? true : false;
 
-console.log(screenSmall);
+// console.log(screenSmall);
 
 var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
 var navList = hamburgerButton.nextElementSibling;
@@ -25,8 +25,9 @@ if (screenSmall) {
     // console.log("large screen" + window.innerWidth);
 }
 
-if (hamburgerButton.getAttribute("aria-expanded") === true) {
-    console("aria true")
+// console.log(hamburgerButton.getAttribute("aria-expanded"));
+if (hamburgerButton.getAttribute("aria-expanded") == true) {
+    console("aria true");
     document.body.onclick = function (e) {
         e.stopPropagation();
         if (navList.contains(e.target)) {
