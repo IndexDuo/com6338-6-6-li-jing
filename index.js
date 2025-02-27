@@ -53,11 +53,12 @@ function handleHamburgerButton() {
         }
     });
 
-    document.onkeyup = function(e){
-        if(e.key === "Escape"){
-            
+    document.onkeyup = function (e) {
+        if (e.key === "Escape" && navList.classList.contains("show-menu")) {
+            navList.classList.remove("show-menu");
+            hamburgerButton.setAttribute("aria-expanded", false);
         }
-    }
+    };
 }
 
 // console.log(hamburgerButton.getAttribute("aria-expanded"));
