@@ -49,6 +49,7 @@ function handleHamburgerButton() {
             navList.classList.contains("show-menu")
         ) {
             navList.classList.remove("show-menu");
+            hamburgerButton.setAttribute("aria-expanded", false);
             // console.log(e.target.textContent + ": outside is clicked");
         }
     });
