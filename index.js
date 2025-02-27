@@ -30,7 +30,7 @@ document.body.onclick = function (e) {
     if (e.target.className === "hamburger-menu") {
         console.log("list is clicked");
     }
-    console.log(e.target.className + ": outside is clicked");
+    console.log(e.target.textContent + ": outside is clicked");
 };
 
 // if (navList.classList.contains("show-menu")) {
