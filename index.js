@@ -7,13 +7,14 @@ var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
 if (screenSmall) {
     handleHamburgerButton();
+} else {
+    addEventListener("resize", () => {
+        screenSmall = window.innerWidth < 800 ? true : false;
+        if (screenSmall) {
+            handleHamburgerButton();
+        }
+    });
 }
-addEventListener("resize", () => {
-    screenSmall = window.innerWidth < 800 ? true : false;
-    if (screenSmall) {
-        handleHamburgerButton();
-    }
-});
 
 function handleHamburgerButton() {
     // console.log("small screen" + window.innerWidth);
@@ -48,7 +49,7 @@ function handleHamburgerButton() {
             navList.classList.contains("show-menu")
         ) {
             navList.classList.remove("show-menu");
-            console.log(e.target.textContent + ": outside is clicked");
+            // console.log(e.target.textContent + ": outside is clicked");
         }
     });
 }
