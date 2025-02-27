@@ -6,10 +6,12 @@ var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
 var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
 
-addEventListener("resize", (event) => {
+addEventListener("resize", () => {
     if (window.innerWidth < 800) {
         // console.log("small screen" + window.innerWidth);
-        hamburgerButton.onClick
+        hamburgerButton.addEventListener("click", () => {
+            navList.classList.add("show-menu");
+        });
     } else {
         // console.log("large screen" + window.innerWidth);
     }
