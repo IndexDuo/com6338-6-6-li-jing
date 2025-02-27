@@ -25,6 +25,14 @@ if (screenSmall) {
     // console.log("large screen" + window.innerWidth);
 }
 
+document.body.onclick = function (e) {
+    e.stopPropagation();
+    if (e.target.className === "hamburger-menu") {
+        console.log("list is clicked");
+    }
+    console.log(e.target.className + ": outside is clicked");
+};
+
 // if (navList.classList.contains("show-menu")) {
 //     hamburgerButton.setAttribute("aria-expanded", "true");
 // } else {
