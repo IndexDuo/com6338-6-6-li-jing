@@ -2,7 +2,7 @@ var screenSmall = window.innerWidth < 800 ? true : false;
 
 // console.log(screenSmall);
 
-var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
+var hamburgerButton = document.querySelector("hamburger-btn");
 var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
 if (screenSmall) {
