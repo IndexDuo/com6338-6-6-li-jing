@@ -3,8 +3,8 @@
 // console.log(screenSize);
 
 var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
-
-console.log(hamburgerButton);
+var navList = hamburgerButton.nextElementSibling;
+console.log(navList);
 
 addEventListener("resize", (event) => {
     if (window.innerWidth < 800) {
