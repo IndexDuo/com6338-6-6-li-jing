@@ -42,6 +42,19 @@ if (hamburgerButton.getAttribute("aria-expanded") == true) {
     };
 }
 
+document.body.onclick = function (e) {
+    e.stopPropagation();
+    if (navList.contains(e.target)) {
+        console.log("list is clicked");
+    } else if (
+        !navList.contains(e.target) &&
+        navList.classList.contains("show-menu")
+    ) {
+        navList.classList.remove("show-menu");
+        console.log(e.target.textContent + ": outside is clicked");
+    }
+};
+
 // if (navList.classList.contains("show-menu")) {
 //     hamburgerButton.setAttribute("aria-expanded", "true");
 // } else {
