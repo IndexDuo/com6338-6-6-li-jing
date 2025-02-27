@@ -1,0 +1,2 @@
+const screenSize = window.innerWidth;
+
