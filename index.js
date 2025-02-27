@@ -57,6 +57,7 @@ function handleHamburgerButton() {
         if (e.key === "Escape" && navList.classList.contains("show-menu")) {
             navList.classList.remove("show-menu");
             hamburgerButton.setAttribute("aria-expanded", false);
+            hamburgerButton.focus();
         }
     };
 }
