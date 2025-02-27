@@ -2,7 +2,7 @@
 
 // console.log(screenSize);
 
-
+var hamburger = document.getElementByC
 
 
 addEventListener("resize", (event) => {
