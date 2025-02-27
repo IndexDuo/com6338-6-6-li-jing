@@ -1,9 +1,21 @@
-var hamburgerButton = document.querySelector("hamburger-btn");
+var screenSmall = window.innerWidth < 800 ? true : false;
+
+// console.log(screenSmall);
+
+var hamburgerButton = document.querySelector(".hamburger-btn");
 var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
+if (screenSmall) {
+    handleHamburgerButton();
+} else {
+    addEventListener("resize", () => {
+        screenSmall = window.innerWidth < 800 ? true : false;
+        if (screenSmall) {
+            handleHamburgerButton();
+        }
+    });
+}
 
-
-handleHamburgerButton();
 function handleHamburgerButton() {
     // console.log("small screen" + window.innerWidth);
     // hamburgerButton.addEventListener("click", (e) => {
