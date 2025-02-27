@@ -33,7 +33,7 @@ if (screenSmall) {
                     console.log(e.target.textContent + ": outside is clicked");
                 }
             };
-        } else {
+        } else if(!navList.classList.contains("show-menu")){
             navList.classList.add("show-menu");
             hamburgerButton.setAttribute("aria-expanded", true);
             console.log(hamburgerButton.getAttribute("aria-expanded"));
