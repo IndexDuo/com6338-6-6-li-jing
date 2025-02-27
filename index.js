@@ -15,16 +15,18 @@ if (screenSmall) {
     hamburgerButton.addEventListener("click", () => {
         if (navList.classList.contains("show-menu")) {
             navList.classList.remove("show-menu");
+            hamburgerButton.setAttribute("aria-expanded", false);
         } else {
             navList.classList.add("show-menu");
+            hamburgerButton.setAttribute("aria-expanded", true);
         }
     });
 } else {
     // console.log("large screen" + window.innerWidth);
 }
 
-if (navList.classList.contains("show-menu")) {
-    hamburgerButton.setAttribute("aria-expanded", "true");
-} else {
-    hamburgerButton.setAttribute("aria-expanded", "false");
-}
+// if (navList.classList.contains("show-menu")) {
+//     hamburgerButton.setAttribute("aria-expanded", "true");
+// } else {
+//     hamburgerButton.setAttribute("aria-expanded", "false");
+// }
