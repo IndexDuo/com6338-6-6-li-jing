@@ -25,7 +25,7 @@ if (screenSmall) {
     // console.log("large screen" + window.innerWidth);
 }
 
-if (hamburgerButton.getAttribute("aria-expanded") == true) {
+if (hamburgerButton.getAttribute("aria-expanded") === true) {
     console("aria true")
     document.body.onclick = function (e) {
         e.stopPropagation();
