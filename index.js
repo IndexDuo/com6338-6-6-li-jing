@@ -22,3 +22,9 @@ if (screenSmall) {
 } else {
     // console.log("large screen" + window.innerWidth);
 }
+
+if (navList.classList.contains("show-menu")) {
+    hamburgerButton.setAttribute("aria-expanded", "true");
+} else {
+    hamburgerButton.setAttribute("aria-expanded", "false");
+}
