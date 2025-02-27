@@ -1,9 +1,8 @@
-
 var hamburgerButton = document.querySelector(".hamburger-btn");
 var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
 
-handleHamburgerButton()
+handleHamburgerButton();
 
 function handleHamburgerButton() {
     // console.log("small screen" + window.innerWidth);
