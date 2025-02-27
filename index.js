@@ -1,16 +1,21 @@
-const screenSmall = window.innerWidth < 800 ? true : false;
+var screenSmall = window.innerWidth < 800 ? true : false;
 
 // console.log(screenSmall);
 
 var hamburgerButton = document.getElementsByClassName("hamburger-btn")[0];
 var navList = hamburgerButton.nextElementSibling;
 // console.log(navList);
-
+if (screenSmall) {
+    handleHamburgerButton();
+}
 addEventListener("resize", () => {
     screenSmall = window.innerWidth < 800 ? true : false;
+    if (screenSmall) {
+        handleHamburgerButton();
+    }
 });
 
-if (screenSmall) {
+function handleHamburgerButton() {
     // console.log("small screen" + window.innerWidth);
     // hamburgerButton.addEventListener("click", (e) => {
     //     e.preventDefault();
@@ -46,8 +51,6 @@ if (screenSmall) {
             console.log(e.target.textContent + ": outside is clicked");
         }
     });
-} else {
-    // console.log("large screen" + window.innerWidth);
 }
 
 // console.log(hamburgerButton.getAttribute("aria-expanded"));
